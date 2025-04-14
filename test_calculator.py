@@ -72,9 +72,9 @@ class TestCalculator(unittest.TestCase):
 
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError) as e:
            square_root(-4)
-        assert "Value cannot be negative"
+        assert e in str(e)
         # Test basic function
         # self.assertRaises(ValueError,(0))
         # self.assertRaises(ValueError,square_root(-4))
