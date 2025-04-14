@@ -37,10 +37,10 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
+        with self.assertRaises(ZeroDivisionError) as e:
+            div(0, 5)
+        assert 'Division by zero not allowed' in str(e.value)
     #     fill in code
-        self.assertRaises(ZeroDivisionError, div(0, 5))
 
 
     def test_logarithm(self): # 3 assertions
@@ -53,7 +53,9 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
     #     fill in code
-        self.assertRaises(ValueError, log(0, 7))
+        with self.assertRaises(ValueError) as e:
+            log(0, 7)
+        assert e in str(e)
     # ##########################
     
     ######## Partner 1
@@ -72,11 +74,12 @@ class TestCalculator(unittest.TestCase):
 
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
-        # with self.assertRaises(<INSERT_ERROR_TYPE>):
-        #    square_root(NUM)
+        with self.assertRaises(ValueError):
+           square_root(-4)
+        assert "Value cannot be negative"
         # Test basic function
-        self.assertRaises(ValueError,(0))
-        self.assertRaises(ValueError,square_root(-4))
+        # self.assertRaises(ValueError,(0))
+        # self.assertRaises(ValueError,square_root(-4))
         self.assertEqual(2,square_root(4))
     ##########################
 

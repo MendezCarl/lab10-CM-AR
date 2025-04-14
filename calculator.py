@@ -35,12 +35,12 @@ def mul(a, b):
 
 def div(a, b):
     if a == 0:
-        raise ZeroDivisionError
+        raise ZeroDivisionError("Division by zero is not allowed")
     return b / a
 
 def log(a, b):
     if a == 0:
-        raise ValueError
+        raise ValueError("Base cannot be zero")
     return log(b, a)
 
 def exp(a, b):
