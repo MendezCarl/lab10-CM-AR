@@ -27,7 +27,7 @@ def hypotenuse(a,b):
 def add(a, b):
     return a + b
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 def mul(a, b):
@@ -47,7 +47,7 @@ def exp(a, b):
     return a ** b
 
 
-def subract(a, b):
+def sub(a, b):
     return a-b
 
 def multiply(a,b):
