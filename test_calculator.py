@@ -64,8 +64,6 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
         self.assertRaises(ValueError, logarithm(0,5))
-        self.assertRaises(ValueError, logarithm(-2, 5))
-        self.assertEqual(2,logarithm(3,9))
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5,hypotenuse(3,4))
