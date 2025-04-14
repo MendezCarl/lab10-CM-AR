@@ -1,4 +1,7 @@
 # https://github.com/MendezCarl/lab10-CW-AR.git
+# Partner 1: Carlos Mendez
+# Partner 2: Ahsan Rahul
+
 import unittest
 from multiprocessing.managers import Value
 
@@ -6,11 +9,17 @@ from calculator import *
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
+    def test_add(self): # 3 assertions
     #     fill in code
+        self.assertEqual(add(0, 0), 0)
+        self.assertEqual(add(100, -100), 0)
+        self.assertNotEqual(add(9, 10), 21)
 
-    # def test_subtract(self): # 3 assertions
+    def test_subtract(self): # 3 assertions
     #     fill in code
+        self.assertEqual(sub(0, 0), 0)
+        self.assertEqual(sub(1, 1), 0)
+        self.assertEqual(sub(1, -1), 2)
     # ##########################
 
     ######## Partner 1
@@ -27,18 +36,25 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
     #     fill in code
+        self.assertRaises(ZeroDivisionError, div(0, 5))
 
-    # def test_logarithm(self): # 3 assertions
+
+    def test_logarithm(self): # 3 assertions
     #     fill in code
+        self.assertEqual(log(4, 16), 2)
+        self.assertEqual(log(2, 4), 2)
+        self.assertEqual(log(3, 9), 2)
 
-    # def test_log_invalid_base(self): # 1 assertion
+
+    def test_log_invalid_base(self): # 1 assertion
     #     # use same technique from test_divide_by_zero
     #     fill in code
+        self.assertRaises(ValueError, log(0, 7))
     # ##########################
     
     ######## Partner 1
