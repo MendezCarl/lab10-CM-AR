@@ -1,6 +1,6 @@
 # https://github.com/MendezCarl/lab10-CW-AR.git
 # Partner 1: Carlos Mendez
-# Partner 2: Ahsan Raul
+# Partner 2: Ahsan Rahul
 """
 calculator.py
 - Defines functions used to create a simple calculator
