@@ -37,9 +37,9 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 2
     def test_divide_by_zero(self): # 1 assertion
     #     # call division function inside, example:
-        with self.assertRaises(ZeroDivisionError) as e:
-            div(0, 5)
-        assert 'Division by zero not allowed' in str(e.value)
+        with self.assertRaises(ValueError) as context:
+            div(10, 0)
+        self.assertEqual(str(context.exception), "Cannot divide by zero")
     #     fill in code
 
 
