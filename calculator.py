@@ -1,4 +1,6 @@
 # https://github.com/MendezCarl/lab10-CW-AR.git
+# Carlos Mendez
+# Ahsan Raul
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -7,6 +9,18 @@ One function per operation, in order.
 """
 # First example
 import math
+
+def square_root(a):
+    try:
+        if a<0:
+            raise ValueError
+        else:
+            return math.sqrt(a)
+    except ValueError:
+        print("Value must be greater than 0")
+
+def hypotenuse(a,b):
+    return math.hypot(a,b)
 
 def add(a, b):
     return a+b
