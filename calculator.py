@@ -34,7 +34,7 @@ def div(a, b):
     return b / a
 
 def log(a, b):
-    if a == 0:
+    if a <= 1:
         raise ValueError("Base cannot be zero")
     return log(b, a)
 

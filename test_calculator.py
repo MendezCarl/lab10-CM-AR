@@ -60,7 +60,7 @@ class TestCalculator(unittest.TestCase):
     #     # use same technique from test_divide_by_zero
     #     fill in code
         try:
-            while self.assertRaises(ValueError):
+            with self.assertRaises(ValueError):
                 log(0,5)
         except:
             return "Error"
@@ -72,7 +72,7 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
         try:
-            while self.assertRaises(ValueError):
+            with self.assertRaises(ValueError):
                 logarithm(0, 5)
         except:
             return "Can't have base equal # <= 0"
