@@ -93,7 +93,7 @@ class TestCalculator(unittest.TestCase):
             return "value can't be less than 1"
         # self.assertRaises(ValueError,square_root(0))
         # self.assertRaises(ValueError,square_root(-4))
-        # self.assertEqual(square_root(4), 2)
+        self.assertEqual(square_root(4), 2)
     ##########################
 
 # Do not touch this
