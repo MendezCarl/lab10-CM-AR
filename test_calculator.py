@@ -3,8 +3,7 @@
 # Partner 2: Ahsan Rahul
 
 import unittest
-import math
-from multiprocessing.managers import Value
+#from multiprocessing.managers import Value
 
 from calculator import *
 
