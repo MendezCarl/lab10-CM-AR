@@ -53,7 +53,7 @@ def logarithm(a,b):
     if a<=1:
         raise ValueError("Value must be greater than 1")
     else:
-        return logarithm(b,a)
+        return log(b,a)
 
 def exponent(a,b):
     return a^b
