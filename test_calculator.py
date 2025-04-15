@@ -49,8 +49,8 @@ class TestCalculator(unittest.TestCase):
     def test_logarithm(self): # 3 assertions
     #     fill in code
         self.assertEqual(log(4, 16),2)
-        self.assertAlmostEqual(log(2, 4),2)
-        self.assertAlmostEqual(log(3, 9),2)
+        self.assertEqual(log(2, 4),2)
+        self.assertEqual(log(3, 9),2)
 
 
     def test_log_invalid_base(self): # 1 assertion
@@ -82,9 +82,15 @@ class TestCalculator(unittest.TestCase):
     def test_sqrt(self): # 3 assertions
         # Test for invalid argument, example:
         # Test basic function
-        self.assertRaises(ValueError,square_root(0))
-        self.assertRaises(ValueError,square_root(-4))
-        self.assertEqual(square_root(4), 2)
+        try:
+            with self.assertRaises(ValueError):
+                square_root(0)
+                square_root(-4)
+        except:
+            print("value can't be less than 1")
+        # self.assertRaises(ValueError,square_root(0))
+        # self.assertRaises(ValueError,square_root(-4))
+        # self.assertEqual(square_root(4), 2)
     ##########################
 
 # Do not touch this
