@@ -3,6 +3,7 @@
 # Partner 2: Ahsan Rahul
 
 import unittest
+import math
 from multiprocessing.managers import Value
 
 from calculator import *
@@ -47,7 +48,7 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): # 3 assertions
     #     fill in code
-        self.assertAlmostEqual(log(4, 16),2)
+        self.assertEqual(log(4, 16),2)
         self.assertAlmostEqual(log(2, 4),2)
         self.assertAlmostEqual(log(3, 9),2)
 
