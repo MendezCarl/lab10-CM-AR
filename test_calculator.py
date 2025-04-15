@@ -41,7 +41,7 @@ class TestCalculator(unittest.TestCase):
         try:
             self.assertRaises(ZeroDivisionError,div(0, 5))
         except:
-            print("Zero divison error")
+            return "Zero divison error"
 
     #     fill in code
 
@@ -53,7 +53,7 @@ class TestCalculator(unittest.TestCase):
             self.assertEqual(logarithm(2, 4),2)
             self.assertEqual(logarithm(3, 9),2)
         except:
-            print("Logarithm error")
+            return "Logarithm error"
 
 
     def test_log_invalid_base(self): # 1 assertion
@@ -63,7 +63,7 @@ class TestCalculator(unittest.TestCase):
             while self.assertRaises(ValueError):
                 log(0,5)
         except:
-            print("Error")
+            return "Error"
     ##########################
     
     ######## Partner 1
@@ -75,7 +75,7 @@ class TestCalculator(unittest.TestCase):
             while self.assertRaises(ValueError):
                 logarithm(0, 5)
         except:
-            print("Can't have base equal # <= 0")
+            return "Can't have base equal # <= 0"
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(5,hypotenuse(3,4))
@@ -90,7 +90,7 @@ class TestCalculator(unittest.TestCase):
                 square_root(0)
                 square_root(-4)
         except:
-            print("value can't be less than 1")
+            return "value can't be less than 1"
         # self.assertRaises(ValueError,square_root(0))
         # self.assertRaises(ValueError,square_root(-4))
         # self.assertEqual(square_root(4), 2)
